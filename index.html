@@ -415,9 +415,9 @@
   </style>
 </head>
 <body>
-  <audio autoplay loop hidden>
-    <source src="Tujh Mein Rab Dikhta Hai Rab Ne Bana Di Jodi 128 Kbps.mp3" type="audio/mpeg">
-  </audio>
+  <audio id="mySong" loop>
+  <source src="Tujh Mein Rab Dikhta Hai Rab Ne Bana Di Jodi 128 Kbps.mp3" type="audio/mpeg">
+</audio>
   <div class="floating-hearts" id="floatingHearts"></div>
 
   <section class="hero">
@@ -585,6 +585,10 @@ My Princess😘My Cute Sa Bchha😘My Hotness ki dukhan🥵My Soulmate😘My Suk
   </footer>
 
   <script>
+    document.addEventListener('click', function() {
+    var audio = document.getElementById('mySong');
+    audio.play();
+}, { once: true }); // 'once: true' se ye sirf pehle click par chalega
 
     function toggleLetter() {
       const letter = document.getElementById('loveLetter');
